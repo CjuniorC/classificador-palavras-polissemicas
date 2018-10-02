@@ -1,5 +1,4 @@
 import string
-
 class Normalizer():
     @staticmethod
     def break_corpus(text):
@@ -7,3 +6,5 @@ class Normalizer():
             text = text.replace(simbol, '.')
             text = text.replace('\n', '')
         return text.split('.')
+
+    
