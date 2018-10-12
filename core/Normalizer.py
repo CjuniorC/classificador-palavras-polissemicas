@@ -4,7 +4,7 @@ class Normalizer():
     def break_corpus(text):
         for simbol in string.punctuation:
             text = text.replace(simbol, '.')
-            text = text.replace('\n', '')
+            text = text.replace('\n', '.')
         return text.split('.')
 
     

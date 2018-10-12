@@ -1,0 +1,43 @@
+@import '../../views/main-view/main-view.component.scss';
+
+.buttons{
+  margin-top: 30px;
+  text-align: center;
+
+  p{
+    margin: 0;
+    color: white;
+    font-weight: bold;
+  }
+
+  .success-btn{
+    background-color: #69c52f;
+    color: white;
+    width: 7em;
+    margin-right: 30px;
+
+    &:hover{
+      transform: scale(1.2);
+      transition: 0.3s transform;
+    }
+  }
+  
+  .fail-btn{
+    background-color: #bb0d8e;
+    color: white; 
+    width: 7em;
+
+    &:hover{
+      transform: scale(1.2);
+      transition: 0.3s transform;
+    }
+  }
+}
+
+
+
+.title{
+  color: white;
+  font-family: $font;
+  text-align: center;
+}

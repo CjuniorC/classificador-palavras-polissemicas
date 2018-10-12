@@ -1,0 +1,31 @@
+<main class="main container">
+  <Header class="row header">
+    <section class="col-md-8 col-md-offset-2">
+      <div class="row text-center">
+        <h1 class="title">Clasificador de Palavras Polissêmicas</h1>
+        <img src="../../../assets/images/logo.png" alt="machine learning logo" class="col-md-6 col-md-offset-3">
+      </div>
+    </section>
+  </Header>
+  <article class="row" *ngIf="!tagged && !loading && !greetings">
+    <section class="col-md-6 col-md-offset-3 form-container">
+      <form class="row form" [formGroup]="form">
+        <input type="text" class="col-md-9" formControlName="sentence" placeholder="Coloque sua frase aqui">
+        <button class="col-md-2 btn btn-primary" [ngClass]="{'disabled':disabledBtn }" (click)="submit()">
+          <p>Classificar</p>
+        </button>
+      </form>
+    </section>
+  </article>
+  <app-result *ngIf="!loading && tagged && !greetings" [result]="meaning"></app-result>
+  <section class="loader col-md-12 text-center" *ngIf="loading">
+    <img src="../../../assets/images/loader.gif" alt="" srcset="">
+  </section>
+  <app-assertion *ngIf="!loading && tagged && !greetings" [result]="meaning" [sentence]="sentence" (loadingEmitter)="setLoading($event)"
+    (resultEmitter)="resetTagged($event)" (greetingsEmitter)="setGreetings($event)"></app-assertion>
+  <section class="row result" *ngIf="!loading && greetings">
+    <div class="col-md-8 col-md-offset-2 alert-success">
+      <p class="text-center">Obrigado por contribuir conosco!!</p>
+    </div>
+  </section>
+</main>

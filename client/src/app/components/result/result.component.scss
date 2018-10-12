@@ -1,0 +1,18 @@
+@import '../../views/main-view/main-view.component.scss';
+
+.result{
+    .alert-success{
+        background-color: transparent;
+        border-color: #f58b1e;
+        color: #fffffff7;
+        margin-top: 40px;
+        text-align: center;
+    }
+    p{
+        font-family: $font;
+        font-size: 30px;
+        span{
+            color: #f58b1e;
+        }
+    }
+}
