@@ -1,0 +1,16 @@
+{
+  "name": "classificador",
+  "scripts": {
+    "postdeploy": "python ./setup.py && python ./server.py"
+  },
+  "env": {
+  },
+  "formation": {
+  },
+  "addons": [
+
+  ],
+  "buildpacks": [
+
+  ]
+}
