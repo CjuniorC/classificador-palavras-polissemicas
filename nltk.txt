@@ -1,0 +1,3 @@
+floresta
+punkt
+stopwords
