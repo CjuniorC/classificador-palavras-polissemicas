@@ -8,6 +8,7 @@ from nltk.corpus import stopwords
 frute = Service.get_corpus('https://classificador-18ac0.firebaseapp.com/frute')
 clothes = Service.get_corpus('https://classificador-18ac0.firebaseapp.com/clothes')
 
+
 app = Flask(__name__)
 
 CORS(app)
