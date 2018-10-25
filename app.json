@@ -1,7 +1,7 @@
 {
   "name": "classificador",
   "scripts": {
-    "postdeploy": "python ./setup.py 
+    "postdeploy": "python ./server.py 
   },
   "env": {
   },
