@@ -3,6 +3,8 @@ from nltk import DefaultTagger
 from nltk import BigramTagger
 
 class Tokenizer():
+
+    
     @staticmethod
     def generate_tokenizer(corpus):
         test = corpus

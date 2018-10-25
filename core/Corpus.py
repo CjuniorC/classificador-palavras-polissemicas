@@ -1,6 +1,8 @@
 from Tokenizer import Tokenizer
 
 class Corpus():
+
+    
     @staticmethod
     def generate_train_base(array, token, word, plural):
         corpus = []

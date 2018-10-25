@@ -1,5 +1,6 @@
 from script import Script
 from Service import Service
+from Normalizer import Normalizer
 
 
 frute = Service.get_corpus('https://classificador-18ac0.firebaseapp.com/frute')

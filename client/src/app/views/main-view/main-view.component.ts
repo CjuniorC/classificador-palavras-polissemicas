@@ -16,6 +16,26 @@ export class MainViewComponent implements OnInit {
   loading: boolean = false;
   sentence: string;
 
+  obj = [
+    {
+      cnpj: '123456789',
+      name: 'Teste1'
+    },
+    {
+      cnpj: '445666723',
+      name: 'Teste1'
+    },
+    {
+      cnpj: '234456789',
+      name: 'Teste1'
+    },
+    {
+      cnpj: '013456789',
+      name: 'Teste1'
+    }
+  ]
+
+
   tagged = false;
   greetings = false;
 
@@ -85,5 +105,7 @@ export class MainViewComponent implements OnInit {
       this.greetings = false;
     }, 10000);
   }
+
+  
 
 }

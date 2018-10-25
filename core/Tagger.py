@@ -5,6 +5,8 @@ import nltk
 
 
 class Tagger():
+
+    
     @staticmethod
     def tagger(corpus, tag):
         for sentence in corpus:

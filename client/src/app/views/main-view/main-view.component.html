@@ -1,31 +1,27 @@
-<main class="main container">
-  <Header class="row header">
-    <section class="col-md-8 col-md-offset-2">
-      <div class="row text-center">
-        <h1 class="title">Clasificador de Palavras Polissêmicas</h1>
-        <img src="../../../assets/images/logo.png" alt="machine learning logo" class="col-md-6 col-md-offset-3">
-      </div>
+<main class="container">
+  <header class="row">
+    <h1 class="col-md-12 text-center title">Classificador de palavras polissêmicas</h1>
+    <section class="explanation col-md-12 text-center">
+      <h3 class="title text-center">Polissemia</h3>
+      <p>Consiste no fato linguístico de uma palavra ter mais de um significado</p>
+      <h4 class="title text-center examples">Exemplos</h4>
+      <p class="text-center">Comer <strong>Manga</strong> com leite mata == Significa Fruta</p>
+      <p class="text-center mb-40">Adoro blusas de <strong>Manga</strong> comprida == Significa Roupa </p>
     </section>
-  </Header>
-  <article class="row" *ngIf="!tagged && !loading && !greetings">
-    <section class="col-md-6 col-md-offset-3 form-container">
-      <form class="row form" [formGroup]="form">
-        <input type="text" class="col-md-9" formControlName="sentence" placeholder="Coloque sua frase aqui">
-        <button class="col-md-2 btn btn-primary" [ngClass]="{'disabled':disabledBtn }" (click)="submit()">
-          <p>Classificar</p>
-        </button>
-      </form>
-    </section>
-  </article>
-  <app-result *ngIf="!loading && tagged && !greetings" [result]="meaning"></app-result>
+  </header>
+  <form [formGroup]="form" class="row" *ngIf="!loading && !tagged">
+    <div class="form-group col-md-5 offset-md-3">
+      <input type="text" class="form-control" formControlName="sentence" placeholder="Coloque sua frase aqui">
+      <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+    </div>
+    <div class="form-group col-md-1">
+      <button class="btn btn-success" [ngClass]="{'disabled':disabledBtn }" (click)="submit()">Classificar</button>
+    </div>
+  </form>
   <section class="loader col-md-12 text-center" *ngIf="loading">
     <img src="../../../assets/images/loader.gif" alt="" srcset="">
   </section>
+  <app-result *ngIf="!loading && tagged && !greetings" [result]="meaning"></app-result>
   <app-assertion *ngIf="!loading && tagged && !greetings" [result]="meaning" [sentence]="sentence" (loadingEmitter)="setLoading($event)"
     (resultEmitter)="resetTagged($event)" (greetingsEmitter)="setGreetings($event)"></app-assertion>
-  <section class="row result" *ngIf="!loading && greetings">
-    <div class="col-md-8 col-md-offset-2 alert-success">
-      <p class="text-center">Obrigado por contribuir conosco!!</p>
-    </div>
-  </section>
 </main>
