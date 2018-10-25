@@ -1,6 +1,7 @@
 {
   "name": "classificador",
   "scripts": {
+    "start": "python server.py"
   },
   "env": {
   },
