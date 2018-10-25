@@ -8,6 +8,5 @@ class Normalizer():
             text = text.replace(simbol, '.')
             text = text.replace('\n', '.')
         n_text = ' '.join(word for word in text.split(' ') if word not in stopwords.words('portuguese'))
-        print(n_text)
         return n_text.split('.')
         

@@ -13,7 +13,7 @@ class Tagger():
             for t in sentence:
                 if t[0].lower() == 'manga' or t[0].lower() == 'mangas':
                     pos = sentence.index(t)
-                    sentence[pos] = (t[0], f'{t[1]}+{tag}')
+                    sentence[pos] = (t[0], '{}+{}'.format((t[1], tag)))
         return corpus
 
     @staticmethod

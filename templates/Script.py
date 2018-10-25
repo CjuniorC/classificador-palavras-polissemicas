@@ -1,9 +1,11 @@
-from Tagger import Tagger
-from Corpus import Corpus
-from Tokenizer import Tokenizer
-from Normalizer import Normalizer
+from templates.Tagger import Tagger
+from templates.Corpus import Corpus
+from templates.Tokenizer import Tokenizer
+from templates.Normalizer import Normalizer
 
 class Script:
+
+
     @staticmethod
     def execute(sentence, frute, clothes):
         corpus = Tagger().tagger_training_corpus()
@@ -16,4 +18,4 @@ class Script:
         n_corpus2 = Tagger().tagger(n_corpus2, 'roupa')
         n_corpus = Corpus().join_corpus(n_corpus, n_corpus2)
         t2 = Tokenizer().generate_tokenizer(n_corpus)
-        return Tokenizer().tokenizer_phrase(sentence.split(' '), t2);
+        return t2

@@ -1,4 +1,4 @@
-from Tokenizer import Tokenizer
+from templates.Tokenizer import Tokenizer
 
 class Corpus():
 
